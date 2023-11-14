@@ -12,29 +12,29 @@ export async function sendEmail(formData) {
 
   try {
     if (!name) {
-      formErrors.name = "Name is required.";
+      formErrors.name = "Name is required";
     } else if (name && name.length > 50) {
-      formErrors.name = "Name must be less than 50 characters.";
+      formErrors.name = "Name must be less than 50 characters";
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!senderEmail) {
-      formErrors.senderEmail = "Email is required.";
+      formErrors.senderEmail = "Email is required";
     } else if (senderEmail && !emailRegex.test(senderEmail)) {
-      formErrors.senderEmail = "Invalid email format.";
+      formErrors.senderEmail = "Invalid email format";
     } else if (
       senderEmail &&
       emailRegex.test(senderEmail) &&
       senderEmail.length > 50
     ) {
-      formErrors.senderEmail = "Email must be less than 50 characters.";
+      formErrors.senderEmail = "Email must be less than 50 characters";
     }
 
     if (!message) {
-      formErrors.message = "Message is required.";
+      formErrors.message = "Message is required";
     } else if (message && message.length > 1000) {
-      formErrors.message = "Message must be less than 1000 characters.";
+      formErrors.message = "Message must be less than 1000 characters";
     }
 
     if (Object.keys(formErrors).length > 0) {
