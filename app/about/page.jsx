@@ -39,12 +39,11 @@ export default function page() {
           dynamic landscape of <strong>Next.js</strong> and{" "}
           <strong>Vue.js</strong>, and extends into the backend territories.
           Proficient in <strong>Node.js</strong> with the{" "}
-          <strong>Express</strong>
-          framework, I craft robust backend solutions, leveraging the power of
-          serverless architecture in Next.js to seamlessly integrate
-          databases—such as
-          <strong>MongoDB</strong>— into the fabric of web applications. But my
-          journey doesn’t end there. <br /> <br />
+          <strong>Express</strong> framework, I craft robust backend solutions,
+          leveraging the power of serverless architecture in Next.js to
+          seamlessly integrate databases —such as <strong>MongoDB</strong>— into
+          the fabric of web applications. But my journey doesn’t end there.{" "}
+          <br /> <br />
           I’m continually expanding my horizons, delving into new programming
           languages and technologies, eager to absorb the latest trends and
           skills that shape the digital sphere. This space is a testament to my

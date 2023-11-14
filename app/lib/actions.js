@@ -11,23 +11,30 @@ export async function sendEmail(formData) {
   let formErrors = {};
 
   try {
-    if (!name || name.length > 50) {
-      formErrors.name = "Name is required and must be less than 50 characters.";
+    if (!name) {
+      formErrors.name = "Name is required.";
+    } else if (name && name.length > 50) {
+      formErrors.name = "Name must be less than 50 characters.";
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (
-      !senderEmail ||
-      !emailRegex.test(senderEmail) ||
+    if (!senderEmail) {
+      formErrors.senderEmail = "Email is required.";
+    } else if (senderEmail && !emailRegex.test(senderEmail)) {
+      formErrors.senderEmail = "Invalid email format.";
+    } else if (
+      senderEmail &&
+      emailRegex.test(senderEmail) &&
       senderEmail.length > 50
     ) {
-      formErrors.senderEmail = "Invalid email format.";
+      formErrors.senderEmail = "Email must be less than 50 characters.";
     }
 
-    if (!message || message.length > 1000) {
-      formErrors.message =
-        "Message is required and must be less than 1000 characters.";
+    if (!message) {
+      formErrors.message = "Message is required.";
+    } else if (message && message.length > 1000) {
+      formErrors.message = "Message must be less than 1000 characters.";
     }
 
     if (Object.keys(formErrors).length > 0) {
@@ -57,7 +64,6 @@ export async function sendEmail(formData) {
 
     return { success: true };
   } catch (error) {
-    console.error(error);
     if (error.response) {
       return {
         error: { submit: "Something went wrong!" },
