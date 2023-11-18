@@ -1,8 +1,8 @@
 /** @format */
-
 import Image from "next/image";
 import SideNav from "./components/home/sideNav";
 import avatar from "../public/avatar.jpeg";
+
 export default function Home() {
   return (
     <>
@@ -11,7 +11,7 @@ export default function Home() {
           <SideNav />
         </div>
         <div className="flex-6 w-full">
-          <header className="bg-gray-200 text-black py-8">
+          <header className="  py-8">
             <div className="container mx-auto text-center">
               <h1 className="text-4xl font-bold hidden md:block">
                 Monzer Danesh
@@ -26,14 +26,14 @@ export default function Home() {
 
               <a
                 href="#projects"
-                className="p-2 bg-blue-500 rounded-md mt-4 inline-block"
+                className="p-2  rounded-md mt-4 inline-block dark:border-solid dark:border-2 dark:border-red-500"
               >
                 View Projects
               </a>
             </div>
           </header>
 
-          <div className="bg-yellow-200 text-black py-8 px-4 my-4">
+          <div className="  py-8 px-4 my-4">
             <div className="hero-content">
               <p>
                 I am a skilled web developer with a passion for creating
@@ -43,44 +43,38 @@ export default function Home() {
               </p>
               <a
                 href="/contact"
-                className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+                className=" text-white py-2 px-4 rounded-md hover:"
               >
                 Contact Me
               </a>
             </div>
           </div>
 
-          <section
-            id="skills"
-            className="bg-orange-300 text-black py-8 px-4 my-4"
-          >
+          <section id="skills" className="  py-8 px-4 my-4">
             <div className="container mx-auto">
               <h2 className="text-3xl font-semibold mb-6">Skills</h2>
-              <ul className="grid grid-cols-2 gap-4 text-black">
-                <li className="bg-white rounded p-2 shadow-md">HTML5</li>
-                <li className="bg-white rounded p-2 shadow-md">CSS3</li>
-                <li className="bg-white rounded p-2 shadow-md">JavaScript</li>
-                <li className="bg-white rounded p-2 shadow-md">React</li>
-                <li className="bg-white rounded p-2 shadow-md">Node.js</li>
+              <ul className="grid grid-cols-2 gap-4 ">
+                <li className=" rounded p-2 shadow-md">HTML5</li>
+                <li className=" rounded p-2 shadow-md">CSS3</li>
+                <li className=" rounded p-2 shadow-md">JavaScript</li>
+                <li className=" rounded p-2 shadow-md">React</li>
+                <li className=" rounded p-2 shadow-md">Node.js</li>
               </ul>
             </div>
           </section>
 
-          <section
-            id="projects"
-            className="bg-gray-300 text-black py-8 px-4 my-4"
-          >
+          <section id="projects" className="  py-8 px-4 my-4">
             <div className="container mx-auto">
               <h2 className="text-3xl font-semibold mb-6">Portfolio</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white rounded shadow-md p-6">
+                <div className=" rounded shadow-md p-6">
                   <h3 className="text-xl font-semibold mb-2">Project 1</h3>
                   <p className="mb-4">Description of Project 1</p>
                   <a href="#" className="btn inline-block">
                     View Project
                   </a>
                 </div>
-                <div className="bg-white rounded shadow-md p-6">
+                <div className=" rounded shadow-md p-6">
                   <h3 className="text-xl font-semibold mb-2">Project 2</h3>
                   <p className="mb-4">Description of Project 2</p>
                   <a href="#" className="btn inline-block">
@@ -92,13 +86,10 @@ export default function Home() {
           </section>
 
           <div className="portfolio">
-            <section
-              id="portfolio"
-              className=" mx-auto bg-yellow-400 text-black py-8 px-4 my-4"
-            >
+            <section id="portfolio" className=" mx-auto   py-8 px-4 my-4">
               <h2 className="text-3xl font-bold text-center">My Portfolio</h2>
               <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <div className="bg-white p-4 rounded-md shadow-md text-black">
+                <div className=" p-4 rounded-md shadow-md ">
                   <Image
                     width={100}
                     height={100}
@@ -110,19 +101,19 @@ export default function Home() {
                   <p>A brief description of Project 1.</p>
                   <a
                     href="https://project1.com"
-                    className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+                    className=" text-white py-2 px-4 rounded-md hover:"
                   >
                     View Project
                   </a>
                   <a
                     href="https://github.com/project1"
-                    className="bg-gray-700 text-white py-2 px-4 rounded-md hover:bg-gray-800"
+                    className=" text-white py-2 px-4 rounded-md hover:"
                   >
                     GitHub Repository
                   </a>
                 </div>
 
-                <div className="bg-white p-4 rounded-md shadow-md text-black">
+                <div className=" p-4 rounded-md shadow-md ">
                   <Image
                     width={100}
                     height={100}
@@ -134,19 +125,19 @@ export default function Home() {
                   <p>A brief description of Project 2.</p>
                   <a
                     href="https://project2.com"
-                    className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+                    className=" text-white py-2 px-4 rounded-md hover:"
                   >
                     View Project
                   </a>
                   <a
                     href="https://github.com/project2"
-                    className="bg-gray-700 text-white py-2 px-4 rounded-md hover:bg-gray-800"
+                    className=" text-white py-2 px-4 rounded-md hover:"
                   >
                     GitHub Repository
                   </a>
                 </div>
 
-                <div className="bg-white p-4 rounded-md shadow-md text-black">
+                <div className=" p-4 rounded-md shadow-md ">
                   <Image
                     width={100}
                     height={100}
@@ -158,13 +149,13 @@ export default function Home() {
                   <p>A brief description of Project 3.</p>
                   <a
                     href="https://project3.com"
-                    className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+                    className=" text-white py-2 px-4 rounded-md hover:"
                   >
                     View Project
                   </a>
                   <a
                     href="https://github.com/project3"
-                    className="bg-gray-700 text-white py-2 px-4 rounded-md hover:bg-gray-800"
+                    className=" text-white py-2 px-4 rounded-md hover:"
                   >
                     GitHub Repository
                   </a>
@@ -175,7 +166,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className="py-8 bg-gray-800 text-white text-center">
+      <footer className="py-8  text-white text-center">
         <div className="container mx-auto">
           <p>&copy; 2023 Monzer Danesh| Web Developer</p>
           <ul className="flex justify-center mt-4">

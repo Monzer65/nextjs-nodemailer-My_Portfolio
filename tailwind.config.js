@@ -29,4 +29,5 @@ module.exports = {
     require("@tailwindcss/forms"),
     // ...
   ],
+  darkMode: "class",
 };
