@@ -9,7 +9,11 @@ export const metadata = {
     template: "%s | Monzer Danesh",
     default: "Monzer Danesh",
   },
-  description: "Generated for Monzer Danesh Portfolio",
+  description:
+    "Welcome to the portfolio of Monzer Danesh, showcasing a collection of projects in web development technologies, and photography. Explore a diverse range of creative works and expertise.",
+  keywords:
+    "portfolio, Monzer Danesh, منذر دانش, projects, web development, nextjs, next js, next.js, vue, نکست جی اس",
+  author: "Monzer Danesh",
 };
 
 export default function RootLayout({ children }) {
