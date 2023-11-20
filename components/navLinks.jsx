@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-
+import { useTheme } from "@/context/themeContext";
 const links = [
   { name: "Home", href: "/", icon: HomeIcon },
   {
@@ -22,6 +22,7 @@ const links = [
 ];
 
 export default function NavLinks() {
+  const { theme } = useTheme();
   const pathname = usePathname();
 
   return (
@@ -33,9 +34,17 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              "flex h-[48px] grow items-center justify-center gap-2 rounded-md md:rounded-none bg-gray-300 p-3 text-sm font-medium hover:bg-gray-400 hover:text-blue-900 md:flex-none md:justify-start md:p-2 md:px-3",
+              "flex h-[48px] grow items-center justify-center gap-2 rounded-md md:rounded-none p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3",
               {
-                "bg-white text-blue-700 relative": pathname === link.href,
+                "bg-gray-800 text-white relative":
+                  theme === "light" && pathname === link.href,
+                "bg-gray-300/70 text-black relative hover:bg-gray-800 hover:text-white":
+                  theme === "light" && pathname != link.href,
+
+                "bg-gray-100 text-black":
+                  theme === "dark" && pathname === link.href,
+                "bg-gray-700/30 hover:bg-gray-100 hover:text-black":
+                  theme === "dark" && pathname != link.href,
               }
             )}
           >

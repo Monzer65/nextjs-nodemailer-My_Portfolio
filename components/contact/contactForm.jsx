@@ -1,6 +1,6 @@
 /** @format */
 "use client";
-import { sendEmail } from "@/app/lib/actions";
+import { sendEmail } from "@/lib/actions";
 import { useState, useRef, useEffect } from "react";
 import { SubmitButton } from "./button";
 import {

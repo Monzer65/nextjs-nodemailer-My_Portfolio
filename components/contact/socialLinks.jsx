@@ -1,9 +1,10 @@
 /** @format */
 "use client";
 import Image from "next/image";
-import facebook from "@/public/facebook.svg";
-import twitter from "@/public/x-twitter.svg";
-import github from "@/public/github.svg";
+import Facebook from "@/public/facebook.svg";
+import Twitter from "@/public/x-twitter.svg";
+import Github from "@/public/github.svg";
+import Linkedin from "@/public/linkedin.svg";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -21,31 +22,38 @@ export default function SocialLinks() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
         exit={{ opacity: 0, x: 200 }}
-        className="flex space-x-4 ml-4"
+        className="flex space-x-4 ml-4 mb-2"
       >
         <a
           href="https://twitter.com/Monzer86"
-          className="w-10 h-10 p-1 bg-white rounded-full transition-transform hover:scale-110"
+          className=" w-8 h-8 transition-transform hover:scale-110"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image width={50} height={50} alt="x icon" src={twitter} />
+          <Twitter className="fill-gray-900 dark:fill-gray-100" />
         </a>
         <a
           href="https://www.facebook.com/Mondan1986?mibextid=ZbWKwL"
-          className="w-10 h-10 p-1 bg-white rounded-full transition-transform hover:scale-110"
+          className="w-8 h-8 transition-transform hover:scale-110"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image width={50} height={50} alt="facebooc icon" src={facebook} />
+          <Facebook className="fill-gray-900 dark:fill-gray-100" />
         </a>
         <a
           href="https://github.com/Monzer65"
-          className="w-10 h-10 p-1 bg-white rounded-full transition-transform hover:scale-110"
+          className=" w-8 h-8 transition-transform hover:scale-110"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image width={50} height={50} alt="github icon" src={github} />
+          <Github className="fill-gray-900 dark:fill-gray-100" />
+        </a>
+        <a
+          className="w-8 h-8 transition-transform hover:scale-110"
+          href="www.linkedin.com/in/monzer-danesh-602b6557"
+          target="_blank"
+        >
+          <Linkedin className="fill-gray-900 dark:fill-gray-100" />
         </a>
       </motion.div>
     );

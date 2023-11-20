@@ -1,7 +1,7 @@
 /** @format */
 
-import AboutText from "../components/about/aboutText";
-import SideNav from "../components/home/sideNav";
+import AboutText from "@/components/about/aboutText";
+import SideNav from "@/components/sideNav";
 
 export const metadata = {
   title: "About",

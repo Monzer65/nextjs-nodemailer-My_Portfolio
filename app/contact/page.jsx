@@ -1,9 +1,9 @@
 /** @format */
 
-import SideNav from "../components/home/sideNav";
-import Form from "../components/contact/contactForm";
-import ContactInfo from "../components/contact/contactInfo";
-import SocialLinks from "../components/contact/socialLinks";
+import SideNav from "@/components/sideNav";
+import Form from "@/components/contact/contactForm";
+import ContactInfo from "@/components/contact/contactInfo";
+import SocialLinks from "@/components/contact/socialLinks";
 
 export const metadata = {
   title: "Contact",

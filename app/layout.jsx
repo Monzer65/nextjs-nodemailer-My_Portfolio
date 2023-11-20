@@ -2,7 +2,7 @@
 
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ThemeSwitch from "./components/themeSwicher";
+import ThemeSwitch from "@/components/themeSwicher";
 import ThemeContextProvider from "@/context/themeContext";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,7 +13,7 @@ export const metadata = {
     default: "Monzer Danesh",
   },
   description:
-    "Welcome to the portfolio of Monzer Danesh, showcasing a collection of projects in web development technologies, and photography. Explore a diverse range of creative works and expertise.",
+    "Welcome to the portfolio of Monzer Danesh, showcasing a collection of projects in web development technologies. Explore a diverse range of creative works and expertise.",
   keywords:
     "portfolio, Monzer Danesh, منذر دانش, projects, web development, nextjs, next js, next.js, vue, نکست جی اس",
   author: "Monzer Danesh",
