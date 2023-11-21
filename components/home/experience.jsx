@@ -9,8 +9,8 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import {
-  AcademicCapIcon,
-  BriefcaseIcon,
+  BookOpenIcon,
+  CodeBracketSquareIcon,
   ServerStackIcon,
   StarIcon,
 } from "@heroicons/react/24/outline";
@@ -18,28 +18,28 @@ import TimelineElement from "./timeLine";
 
 const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Web Development Self-Study",
+    location: "Sanandaj",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(AcademicCapIcon),
-    date: "2019",
+      "Engaged in intensive self-study of web development technologies including HTML, CSS, JavaScript, Node.js, React, Next.js, Vue.js, and Express over a period of 2 years.",
+    icon: React.createElement(BookOpenIcon),
+    date: "2019 - present",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Freelance Web Developer",
+    location: "Sanandaj",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(BriefcaseIcon),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(ServerStackIcon),
+      "Applied acquired skills in web development as a freelance developer, creating dynamic and responsive web applications utilizing JavaScript, React, and Node.js.",
+    icon: React.createElement(CodeBracketSquareIcon),
     date: "2021 - present",
+  },
+  {
+    title: "Personal Projects",
+    location: "Sanandaj",
+    description:
+      "Independently worked on various personal projects to deepen understanding and expertise in web development technologies. Projects included implementing modern frameworks like Next.js and exploring backend technologies.",
+    icon: React.createElement(ServerStackIcon),
+    date: "Ongoing",
   },
 ];
 
