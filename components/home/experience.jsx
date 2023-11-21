@@ -3,12 +3,16 @@
 "use client";
 
 import React from "react";
-import { VerticalTimeline } from "react-vertical-timeline-component";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import {
   AcademicCapIcon,
   BriefcaseIcon,
   ServerStackIcon,
+  StarIcon,
 } from "@heroicons/react/24/outline";
 import TimelineElement from "./timeLine";
 
@@ -49,6 +53,11 @@ export default function Experience() {
         {experiencesData.map((item, index) => {
           return <TimelineElement key={index} item={item} />;
         })}
+        <VerticalTimelineElement
+          visible={true}
+          iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
+          icon={<StarIcon />}
+        />
       </VerticalTimeline>
     </section>
   );

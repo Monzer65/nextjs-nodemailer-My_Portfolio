@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { useTheme } from "@/context/themeContext";
 
 export default function TimelineElement({ item }) {
-  const theme = useTheme();
+  const { theme } = useTheme();
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -24,10 +24,7 @@ export default function TimelineElement({ item }) {
           padding: "1.3rem 2rem",
         }}
         contentArrowStyle={{
-          borderRight:
-            theme === "light"
-              ? "0.4rem solid #9ca3af"
-              : "0.4rem solid rgba(255, 255, 255, 0.5)",
+          borderRight: theme === "light" ? "7px solid #bbb" : "7px solid #fgh",
         }}
         date={item.date}
         icon={item.icon}

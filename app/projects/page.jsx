@@ -1,5 +1,7 @@
 /** @format */
-
+import Link from "next/link";
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import Portfolio from "@/components/home/portfolio";
 export const metadata = {
   title: "Projects",
   description:
@@ -9,5 +11,16 @@ export const metadata = {
 };
 
 export default function page() {
-  return <main className="p-2">Projects</main>;
+  return (
+    <main className="p-2">
+      <Link
+        href={"/"}
+        className="flex gap-2 w-fit h-10 py-2 px-4 bg-gray-300 shadow-lg rounded-md dark:bg-gray-700  hover:scale-105"
+      >
+        <ArrowLeftIcon />
+        Back to home
+      </Link>
+      <Portfolio />
+    </main>
+  );
 }

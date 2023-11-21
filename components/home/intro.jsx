@@ -12,7 +12,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Linkedin from "@/public/linkedin.svg";
 import Github from "@/public/github.svg";
-import avatar from "@/public/avatar.jpeg";
+import avatar from "@/public/avatar.png";
 
 export default function Intro() {
   return (
@@ -27,7 +27,8 @@ export default function Intro() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               type: "tween",
-              duration: 0.2,
+              duration: 0.5,
+              delay: 0.5,
             }}
           >
             <Image
@@ -47,20 +48,20 @@ export default function Intro() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               type: "spring",
-              stiffness: 125,
-              delay: 0.2,
-              duration: 2.7,
+              stiffness: 425,
+              delay: 0.75,
+              duration: 0.75,
             }}
           >
             👋
           </motion.span>
         </div>
       </div>
-
       <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 1000 }}
+        animate={{ opacity: 1, y: 0, delay: 0.75 }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
         <span className="font-bold">Hey there, I&apos;m Monzer.</span> I&apos;m
         a a dedicated full-stack web developer fueled by a passion for crafting
@@ -69,13 +70,13 @@ export default function Intro() {
         <span className="underline">React (Next.js)</span>, I thrive on
         embracing and mastering new technologies.
       </motion.h1>
-
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.1,
+          duration: 1,
+          delay: 0.75,
         }}
       >
         <Link
@@ -97,7 +98,7 @@ export default function Intro() {
 
         <a
           className="w-8 h-8 focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition "
-          href="www.linkedin.com/in/monzer-danesh-602b6557"
+          href="https://www.linkedin.com/in/monzer-danesh-602b6557"
           target="_blank"
         >
           <Linkedin className="fill-gray-900 dark:fill-gray-100" />

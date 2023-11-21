@@ -50,8 +50,9 @@ export default function SocialLinks() {
         </a>
         <a
           className="w-8 h-8 transition-transform hover:scale-110"
-          href="www.linkedin.com/in/monzer-danesh-602b6557"
+          href="https://www.linkedin.com/in/monzer-danesh-602b6557"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Linkedin className="fill-gray-900 dark:fill-gray-100" />
         </a>

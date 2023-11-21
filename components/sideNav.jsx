@@ -2,7 +2,7 @@
 import Link from "next/link";
 import NavLinks from "./navLinks";
 import Image from "next/image";
-import avatar from "@/public/avatar.jpeg";
+import logo from "@/public/logo.png";
 
 export default function SideNav() {
   return (
@@ -16,8 +16,8 @@ export default function SideNav() {
             <Image
               width={100}
               height={100}
-              alt="avatar"
-              src={avatar}
+              alt="logo"
+              src={logo}
               className="h-[full] md:w-full "
             />
             <h2 className="text-[40px] font-bold md:hidden">Monzer Danesh</h2>
