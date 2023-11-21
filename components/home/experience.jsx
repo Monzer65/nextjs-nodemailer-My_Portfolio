@@ -23,7 +23,7 @@ const experiencesData = [
     description:
       "Engaged in intensive self-study of web development technologies including HTML, CSS, JavaScript, Node.js, React, Next.js, Vue.js, and Express over a period of 2 years.",
     icon: React.createElement(BookOpenIcon),
-    date: "2019 - present",
+    date: "2021 - present",
   },
   {
     title: "Freelance Web Developer",
@@ -31,7 +31,7 @@ const experiencesData = [
     description:
       "Applied acquired skills in web development as a freelance developer, creating dynamic and responsive web applications utilizing JavaScript, React, and Node.js.",
     icon: React.createElement(CodeBracketSquareIcon),
-    date: "2021 - present",
+    date: "2022 - present",
   },
   {
     title: "Personal Projects",
