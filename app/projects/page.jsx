@@ -1,7 +1,8 @@
 /** @format */
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import Portfolio from "@/components/home/portfolio";
+import Portfolio from "@/components/projects/portfolio";
+
 export const metadata = {
   title: "Projects",
   description:

@@ -20,7 +20,7 @@ export default function page() {
       <div className="w-full flex-1">
         <SideNav />
       </div>
-      <div className="flex-6 w-full px-4 pt-8 ">
+      <div className="flex-6 w-full px-4 py-8 ">
         <div className="md:flex gap-4 overflow-hidden">
           <Form />
           <div className="flex flex-col justify-between ">
