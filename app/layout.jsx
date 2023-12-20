@@ -15,7 +15,7 @@ export const metadata = {
   description:
     "Welcome to the portfolio of Monzer Danesh, showcasing a collection of projects in web development technologies. Explore a diverse range of creative works and expertise.",
   keywords:
-    "portfolio, Monzer Danesh, منذر دانش, projects, web development, nextjs, next js, next.js, vue, نکست جی اس",
+    "portfolio, Monzer Danesh, منذر دانش, projects, web development, nextjs, next js, next.js, vue, نکست جی اس, MongoDb, typescript",
   author: "Monzer Danesh",
 };
 
