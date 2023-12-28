@@ -37,7 +37,7 @@ export default function Portfolio() {
             </p>
             <Link
               href={`/projects/${project.title}`}
-              className='block w-full text-center py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition duration-300'
+              className='block w-full text-center py-2 px-4 bg-green-800 hover:bg-green-900 text-white rounded-lg transition duration-300'
             >
               Detail
             </Link>

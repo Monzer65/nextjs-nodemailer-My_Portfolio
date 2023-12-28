@@ -4,6 +4,7 @@ import { projects } from "@/lib/data";
 import Image from "next/image";
 import ModalCarousel from "./imageCarousel";
 import { useState } from "react";
+import clsx from "clsx";
 export default function ProjectDetail({ title }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -23,13 +24,13 @@ export default function ProjectDetail({ title }) {
 
   return (
     <div className='mb-16 md:mb-20 lg:mb-24 mt-8 max-w-xl mx-auto'>
-      <h2 className='text-3xl lg:text-4xl font-bold mb-4 text-center'>
+      <h1 className='text-3xl lg:text-4xl font-bold mb-4 text-center'>
         {project?.title}
-      </h2>
+      </h1>
       <div className='mb-6'>
         {project?.technologies.map((data, index) => (
           <div key={index} className='text-lg mb-6'>
-            <h4 className='text-xl font-bold mb-2'>{data.title}</h4>
+            <h2 className='text-xl font-bold mb-2'>{data.title}</h2>
             <div>
               {data.techs.map((t, index) => (
                 <p
@@ -47,17 +48,18 @@ export default function ProjectDetail({ title }) {
       <div>
         {project?.longDescription.map((data, index) => (
           <div key={index} className='text-lg mb-6'>
-            <h3 className='text-xl font-bold mb-2'>{data?.title}</h3>
+            <h2 className='text-xl font-bold mb-2'>{data?.title}</h2>
             <ul className=' list-inside'>
-              {data?.desc.map((d, index) =>
-                data?.desc.length > 1 ? (
-                  <li key={index} className='list-item list-disc ml-6'>
-                    {d}
-                  </li>
-                ) : (
-                  <p key={index}>{d}</p>
-                )
-              )}
+              {data?.desc.map((d, index) => (
+                <li
+                  key={index}
+                  className={clsx({
+                    "list-item list-disc ml-6": data.desc.length > 1,
+                  })}
+                >
+                  {d}
+                </li>
+              ))}
             </ul>
           </div>
         ))}
@@ -83,6 +85,7 @@ export default function ProjectDetail({ title }) {
           href={project?.website}
           target='_blank'
           className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded transition duration-300'
+          style={{ color: "#fff" }}
         >
           Visit Site
         </a>
@@ -92,7 +95,7 @@ export default function ProjectDetail({ title }) {
           className={
             project?.repository === "disabled"
               ? "hidden"
-              : "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded transition duration-300"
+              : "bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-6 rounded transition duration-300"
           }
         >
           View Code
