@@ -22,9 +22,7 @@ export const metadata = {
     content: "DB2D892404D7D27E3068DE6B496BE955",
   },
 };
-{
-  /* <meta name="msvalidate.01" content="DB2D892404D7D27E3068DE6B496BE955" /> */
-}
+
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>

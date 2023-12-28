@@ -1,5 +1,3 @@
-/** @format */
-
 "use client";
 
 import Image from "next/image";
@@ -102,6 +100,7 @@ export default function Intro() {
           target='_blank'
         >
           <Linkedin className='fill-gray-900 dark:fill-gray-100' />
+          <span className='sr-only'>Linkedin</span>
         </a>
 
         <a
@@ -109,7 +108,8 @@ export default function Intro() {
           href='https://github.com/Monzer65'
           target='_blank'
         >
-          <Github className='fill-gray-900 dark:fill-gray-100' />
+          <Github className='fill-gray-900 dark:fill-gray-100' />{" "}
+          <span className='sr-only'>GitHub</span>
         </a>
       </motion.div>
     </section>
