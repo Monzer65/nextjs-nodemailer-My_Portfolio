@@ -17,10 +17,12 @@ export const metadata = {
   keywords:
     "portfolio, Monzer Danesh, منذر دانش, projects, web development, nextjs, next js, next.js, vue, نکست جی اس, MongoDb, typescript",
   author: "Monzer Danesh",
-  custom: {
-    name: "msvalidate.01",
-    content: "DB2D892404D7D27E3068DE6B496BE955",
-  },
+  custom: [
+    {
+      name: "msvalidate.01",
+      content: "DB2D892404D7D27E3068DE6B496BE955",
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
