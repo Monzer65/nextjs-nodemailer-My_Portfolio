@@ -32,7 +32,7 @@ export default function ModalCarousel({ isOpen, onClose, project }) {
     <>
       {isOpen && (
         <div
-          className='fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-75 modal-overlay'
+          className='fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-75 modal-overlay backdrop-blur-sm'
           onClick={closeModal}
         >
           <div className=' max-w-lg overflow-y-auto w-[300px] sm:w-[400px] md:w-[450px] h-[60vh] '>

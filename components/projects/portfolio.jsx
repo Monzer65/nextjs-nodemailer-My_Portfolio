@@ -25,6 +25,7 @@ export default function Portfolio() {
                 alt={project.title}
                 layout='fill'
                 objectFit='cover'
+                objectPosition='top'
                 className='rounded-t-lg'
               />
             </div>
