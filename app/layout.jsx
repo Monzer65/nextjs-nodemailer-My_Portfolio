@@ -17,17 +17,14 @@ export const metadata = {
   keywords:
     "portfolio, Monzer Danesh, منذر دانش, projects, web development, nextjs, next js, next.js, vue, نکست جی اس, MongoDb, typescript",
   author: "Monzer Danesh",
-  custom: [
-    {
-      name: "msvalidate.01",
-      content: "DB2D892404D7D27E3068DE6B496BE955",
-    },
-  ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
+      <head>
+        <meta name='msvalidate.01' content='DB2D892404D7D27E3068DE6B496BE955' />
+      </head>
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
