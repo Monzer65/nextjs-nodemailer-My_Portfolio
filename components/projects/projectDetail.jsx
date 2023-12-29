@@ -84,8 +84,7 @@ export default function ProjectDetail({ title }) {
         <a
           href={project?.website}
           target='_blank'
-          className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded transition duration-300'
-          style={{ color: "#fff" }}
+          className='bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-6 rounded transition duration-300'
         >
           Visit Site
         </a>
