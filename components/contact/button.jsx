@@ -14,24 +14,24 @@ export function SubmitButton() {
 
   return (
     <button
-      type="submit"
+      type='submit'
       aria-disabled={pending}
       className={clsx(
         "flex items-center justify-center gap-2 w-full font-semibold py-2 rounded text-white",
         {
-          "bg-blue-500 hover:bg-blue-600": !pending,
+          "bg-blue-800 hover:bg-blue-900": !pending,
           "bg-gray-700 cursor-wait": pending,
         }
       )}
     >
       {pending ? (
         <>
-          <RocketLaunchIcon className="w-[20px]" />
+          <RocketLaunchIcon className='w-[20px]' />
           sending...
         </>
       ) : (
         <>
-          <PaperAirplaneIcon className="w-[20px]" />
+          <PaperAirplaneIcon className='w-[20px]' />
           send message
         </>
       )}
