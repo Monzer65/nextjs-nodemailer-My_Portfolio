@@ -84,7 +84,7 @@ export default function ProjectDetail({ title }) {
         <a
           href={project?.website}
           target='_blank'
-          className='bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-6 rounded transition duration-300'
+          className='bg-blue-800 hover:bg-blue-900 text-white dark:bg-stone-200  dark:hover:bg-stone-100 dark:text-blue-900 font-bold py-2 px-6 rounded transition duration-300'
         >
           Visit Site
         </a>
@@ -94,7 +94,7 @@ export default function ProjectDetail({ title }) {
           className={
             project?.repository === "disabled"
               ? "hidden"
-              : "bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-6 rounded transition duration-300"
+              : "bg-gray-700 hover:bg-gray-800 text-white dark:bg-stone-200  dark:hover:bg-stone-100 dark:text-gray-900 font-bold py-2 px-6 rounded transition duration-300"
           }
         >
           View Code
