@@ -8,6 +8,7 @@ import {
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import SocialLinks from "./socialLinks";
+import dynamic from "next/dynamic";
 
 const OpenStreetMap = dynamic(() => import("@/components/contact/maps"), {
   ssr: false,
