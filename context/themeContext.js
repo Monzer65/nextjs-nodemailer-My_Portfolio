@@ -1,5 +1,3 @@
-/** @format */
-
 "use client";
 
 import React, { useEffect, useState, createContext, useContext } from "react";
@@ -22,17 +20,19 @@ export default function ThemeContextProvider({ children }) {
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme");
+    if (typeof window !== "undefined") {
+      const localTheme = window.localStorage.getItem("theme");
 
-    if (localTheme) {
-      setTheme(localTheme);
+      if (localTheme) {
+        setTheme(localTheme);
 
-      if (localTheme === "dark") {
+        if (localTheme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme("dark");
         document.documentElement.classList.add("dark");
       }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
     }
   }, []);
 

@@ -1,6 +1,5 @@
 import Form from "@/components/contact/contactForm";
 import ContactInfo from "@/components/contact/contactInfo";
-import SocialLinks from "@/components/contact/socialLinks";
 
 export const metadata = {
   title: "Contact",
