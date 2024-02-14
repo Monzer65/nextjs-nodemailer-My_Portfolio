@@ -8,7 +8,10 @@ import {
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import SocialLinks from "./socialLinks";
-import OpenStreetMap from "./maps";
+
+const OpenStreetMap = dynamic(() => import("@/components/contact/maps"), {
+  ssr: false,
+});
 
 export default function ContactInfo() {
   const [mounted, setMounted] = useState();
