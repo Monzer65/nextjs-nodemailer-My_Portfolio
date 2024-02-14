@@ -1,4 +1,3 @@
-/** @format */
 "use client";
 import Image from "next/image";
 import Facebook from "@/public/facebook.svg";
@@ -17,16 +16,10 @@ export default function SocialLinks() {
     return null;
   } else {
     return (
-      <motion.div
-        initial={{ opacity: 0, x: -200 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.75, ease: "easeOut" }}
-        exit={{ opacity: 0, x: 200 }}
-        className='flex space-x-4 ml-4 mb-2'
-      >
+      <div className='flex gap-4 mx-auto md:mx-0'>
         <a
           href='https://twitter.com/Monzer86'
-          className=' w-8 h-8 transition-transform hover:scale-110'
+          className=' w-5 sm:w-6 md:w-8 transition-transform hover:scale-110'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -35,7 +28,7 @@ export default function SocialLinks() {
         </a>
         <a
           href='https://www.facebook.com/Mondan1986?mibextid=ZbWKwL'
-          className='w-8 h-8 transition-transform hover:scale-110'
+          className='w-5 sm:w-6 md:w-8 transition-transform hover:scale-110'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -44,7 +37,7 @@ export default function SocialLinks() {
         </a>
         <a
           href='https://github.com/Monzer65'
-          className=' w-8 h-8 transition-transform hover:scale-110'
+          className=' w-5 sm:w-6 md:w-8 transition-transform hover:scale-110'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -52,7 +45,7 @@ export default function SocialLinks() {
           <span className='sr-only'>Github</span>
         </a>
         <a
-          className='w-8 h-8 transition-transform hover:scale-110'
+          className='w-5 sm:w-6 md:w-8 transition-transform hover:scale-110'
           href='https://www.linkedin.com/in/monzer-danesh-602b6557'
           target='_blank'
           rel='noopener noreferrer'
@@ -60,7 +53,7 @@ export default function SocialLinks() {
           <Linkedin className='fill-gray-900 dark:fill-gray-100' />
           <span className='sr-only'>Linkedin</span>
         </a>
-      </motion.div>
+      </div>
     );
   }
 }

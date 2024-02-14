@@ -18,6 +18,7 @@ module.exports = {
       },
       animation: {
         spin: "spin 0.75s linear infinite",
+        typing: "typing 4s steps(48) alternate 3",
       },
       keyframes: {
         spin: {
@@ -31,6 +32,22 @@ module.exports = {
         shimmer: {
           "100%": {
             transform: "translateX(100%)",
+          },
+        },
+        typing: {
+          "0%": {
+            width: "0%",
+          },
+          "100%": {
+            width: "100%",
+          },
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent",
+          },
+          "100%": {
+            borderColor: "black",
           },
         },
       },

@@ -9,10 +9,11 @@ export default function TimelineElement({ item }) {
   const { theme } = useTheme();
   const { ref, inView } = useInView({
     triggerOnce: true,
+    threshold: 0.75,
   });
 
   return (
-    <div ref={ref} className="vertical-timeline-element">
+    <div ref={ref} className='vertical-timeline-element'>
       <VerticalTimelineElement
         visible={inView}
         contentStyle={{
@@ -33,9 +34,9 @@ export default function TimelineElement({ item }) {
           fontSize: "1.5rem",
         }}
       >
-        <h3 className="font-semibold capitalize">{item.title}</h3>
-        <p className="font-normal mt-0">{item.location}</p>
-        <p className="mt-1 font-normal text-gray-700 dark:text-white/75">
+        <h3 className='font-semibold capitalize'>{item.title}</h3>
+        <p className='font-normal mt-0'>{item.location}</p>
+        <p className='mt-1 font-normal text-gray-700 dark:text-white/75'>
           {item.description}
         </p>
       </VerticalTimelineElement>

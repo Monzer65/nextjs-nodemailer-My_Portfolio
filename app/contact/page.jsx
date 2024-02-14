@@ -1,6 +1,3 @@
-/** @format */
-
-import SideNav from "@/components/sideNav";
 import Form from "@/components/contact/contactForm";
 import ContactInfo from "@/components/contact/contactInfo";
 import SocialLinks from "@/components/contact/socialLinks";
@@ -16,19 +13,11 @@ export const metadata = {
 
 export default function page() {
   return (
-    <div className="md:flex">
-      <div className="w-full flex-1">
-        <SideNav />
+    <main className='flex-6 px-4 py-8'>
+      <div className='md:flex gap-4 overflow-hidden'>
+        <Form />
+        <ContactInfo />
       </div>
-      <div className="flex-6 w-full px-4 py-8 ">
-        <div className="md:flex gap-4 overflow-hidden">
-          <Form />
-          <div className="flex flex-col justify-between ">
-            <ContactInfo />
-            <SocialLinks />
-          </div>
-        </div>
-      </div>
-    </div>
+    </main>
   );
 }

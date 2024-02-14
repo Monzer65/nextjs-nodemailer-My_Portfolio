@@ -4,8 +4,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeSwitch from "@/components/themeSwicher";
 import ThemeContextProvider from "@/context/themeContext";
-
-const inter = Inter({ subsets: ["latin"] });
+import SideNav from "@/components/sideNav";
+import Footer from "@/components/footer";
+import { poppins } from "@/components/fonts";
 
 export const metadata = {
   title: {
@@ -26,14 +27,22 @@ export default function RootLayout({ children }) {
         <meta name='msvalidate.01' content='DB2D892404D7D27E3068DE6B496BE955' />
       </head>
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${poppins.className} bg-gray-50 text-gray-950 relative dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
-        <div className='bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]'></div>
-        <div className='bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]'></div>
+        <div className='bg-[#b0bcc2] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#6b2f34]'></div>
+        <div className='bg-[#c7c9ca] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#3a1d45]'></div>
 
         <ThemeContextProvider>
-          {children}
+          <div className='relative max-w-5xl m-auto sm:-top-64'>
+            <div className='sticky top-0 start-2 end-0 sm:end-auto sm:w-max sm:top-10 z-20'>
+              <SideNav />
+            </div>
+            <div className='max-w-3xl m-auto shadow-2xl sm:pl-20 min-[1000px]:pl-0'>
+              {children}
+            </div>
+          </div>
           <ThemeSwitch />
+          <Footer />
         </ThemeContextProvider>
       </body>
     </html>

@@ -1,5 +1,3 @@
-/** @format */
-
 "use client";
 
 import { useFormStatus } from "react-dom";
@@ -25,15 +23,15 @@ export function SubmitButton() {
       )}
     >
       {pending ? (
-        <>
-          <RocketLaunchIcon className='w-[20px]' />
-          sending...
-        </>
+        <div className='flex items-center space-x-2 animate-pulse'>
+          <RocketLaunchIcon className='w-5 h-5' />
+          <span>Sending...</span>
+        </div>
       ) : (
-        <>
-          <PaperAirplaneIcon className='w-[20px]' />
-          send message
-        </>
+        <div className='flex items-center space-x-2'>
+          <PaperAirplaneIcon className='w-5 h-5' />
+          <span>Send</span>
+        </div>
       )}
     </button>
   );

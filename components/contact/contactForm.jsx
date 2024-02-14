@@ -1,4 +1,3 @@
-/** @format */
 "use client";
 import { sendEmail } from "@/lib/actions";
 import { useState, useRef, useEffect } from "react";
@@ -8,12 +7,6 @@ import {
   ExclamationCircleIcon,
 } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
-import { Lusitana } from "next/font/google";
-
-export const lusitana = Lusitana({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
 
 export default function Form() {
   const [errors, setErrors] = useState({});
@@ -33,13 +26,14 @@ export default function Form() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
         exit={{ opacity: 0, x: 200 }}
-        className='max-w-md md:w-full flex-1 '
+        className='max-w-md flex-1 m-auto'
       >
-        <h1
-          className={`${lusitana.className} font-bold text-2xl md:text-4xl text-red-500`}
-        >
+        <h1 className='text-3xl font-medium capitalize mb-8 text-center px-4'>
           Contact Me
         </h1>
+        <p className='text-gray-500'>
+          Complete the form below, and I'll reach out to you promptly
+        </p>
         <form
           ref={ref}
           action={async (formData) => {
@@ -53,7 +47,7 @@ export default function Form() {
               ref.current?.reset();
             }
           }}
-          className='p-4 md:mt-10 rounded-lg'
+          className=' md:mt-10 rounded-lg'
         >
           <div className='mb-4'>
             <label htmlFor='name' className='block text-sm font-semibold '>
@@ -64,7 +58,7 @@ export default function Form() {
               id='name'
               name='name'
               className='w-full px-4 py-2 border rounded text-black'
-              placeholder='How I call you?'
+              placeholder='Enter thy name'
             />
             {errors?.name && (
               <p
@@ -85,7 +79,7 @@ export default function Form() {
               id='email'
               name='senderEmail'
               className='w-full px-4 py-2 border rounded text-black'
-              placeholder='youremail@example.com'
+              placeholder='Your email, a beacon for our reply'
             />
             {errors?.senderEmail && (
               <p
@@ -107,7 +101,7 @@ export default function Form() {
               name='message'
               className='w-full px-4 py-2 border rounded text-black'
               rows='4'
-              placeholder='How can I help you?'
+              placeholder='Unleash your thoughts upon this scroll'
             ></textarea>
             {errors?.message && (
               <p className='flex items-center gap-2 text-red-500 bg-white rounded-sm mt-[2px] px-4 py-2'>

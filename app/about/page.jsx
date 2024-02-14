@@ -1,7 +1,6 @@
-/** @format */
-
 import AboutText from "@/components/about/aboutText";
-import SideNav from "@/components/sideNav";
+import Experience from "@/components/about/experience";
+import Skills from "@/components/about/skills";
 
 export const metadata = {
   title: "About",
@@ -14,13 +13,10 @@ export const metadata = {
 
 export default function page() {
   return (
-    <div className="md:flex">
-      <div className="w-full flex-1">
-        <SideNav />
-      </div>
-      <div className="flex-6 w-full px-4 pt-8 pb-4 overflow-hidden">
-        <AboutText />
-      </div>
-    </div>
+    <main className='flex-6 px-4 pt-8 pb-4'>
+      <AboutText />
+      <Skills />
+      <Experience />
+    </main>
   );
 }

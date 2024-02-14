@@ -1,5 +1,3 @@
-/** @format */
-
 "use client";
 
 import React from "react";
@@ -45,11 +43,11 @@ const experiencesData = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
-      <h2 className="text-3xl font-medium capitalize mb-8 text-center">
+    <section id='experience' className='mb-28 sm:mb-40'>
+      <h2 className='text-3xl font-medium capitalize mb-8 text-center'>
         My experience
       </h2>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor=''>
         {experiencesData.map((item, index) => {
           return <TimelineElement key={index} item={item} />;
         })}

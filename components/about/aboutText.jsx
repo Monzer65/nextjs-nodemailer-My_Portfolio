@@ -1,15 +1,10 @@
-/** @format */
-
 "use client";
 
-import { Lusitana } from "next/font/google";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
-export const lusitana = Lusitana({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+import { poppins } from "../fonts";
+import Skills from "./skills";
+import Experience from "./experience";
 
 export default function AboutText() {
   const [mounted, setMounted] = useState();
@@ -26,7 +21,7 @@ export default function AboutText() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.75, ease: "easeOut" }}
           exit={{ opacity: 0, x: 200 }}
-          className={`${lusitana.className} font-bold text-red-500 text-2xl md:text-4xl mb-10`}
+          className='text-3xl font-medium capitalize mb-8 text-center px-4'
         >
           About me
         </motion.h1>
@@ -35,43 +30,34 @@ export default function AboutText() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.75, ease: "easeOut" }}
           exit={{ opacity: 0, x: 200 }}
-          className="text-xl md:text-2xl text-justify"
+          className={`${poppins.className} text-base md:text-lg px-4`}
         >
-          Greetings from the digital realm! I&apos;m Monzer—a web developer and
-          a digital artisan weaving vibrant online experiences. I channel my
-          fiery passion for technology into crafting websites that not only
-          mesmerize but also guide users on seamless digital voyages.
-          <br />
-          Originating in 1986, my journey began in the world of food science.
-          While pursuing a Master&apos;s degree in Food Science, I dabbled in
-          unraveling the intricacies of food factories. However, my fascination
-          with technology led me to pivot from the culinary arts to the
-          ever-evolving landscape of web development.
-          <br />
-          A self-taught enthusiast, I devoted myself to mastering the nuances of
-          web development. I immersed in various technologies, wielding a
-          spectrum of programming languages and frameworks. My expertise extends
-          from the dynamic terrains of Next.js and Vue.js to backend prowess in
-          Node.js with the Express framework. Crafting robust solutions
-          utilizing serverless architectures and seamlessly integrating
-          databases like MongoDB fuels my passion. But my journey is a perpetual
-          exploration.
-          <br />
-          With an unquenchable thirst for knowledge, I eagerly embrace emerging
-          technologies to keep my creations innovative. I&apos;m continually
-          expanding my horizon, diving into new programming languages and
-          technologies, ensuring my digital creations stay at the cutting edge.
-          <br />
-          This space epitomizes my fervor for creating digital marvels.
-          It&apos;s a fusion of diverse expertise and unwavering enthusiasm for
-          the evolving web. Join me in discovering the boundless possibilities
-          that the digital realm offers. Thank you for joining me on this
-          journey!
-          <br />
-          <br />
-          Warm regards,
-          <br />
-          Monzer
+          <p className='my-2'>
+            {" "}
+            Glad you're here! I&apos;m Monzer Danesh—a web developer and a
+            digital artisan weaving vibrant online experiences.
+          </p>
+          <p className='my-2'>
+            Originating from Sanandaj, Kurdistan, I embarked on my journey in
+            2021. As a self-taught enthusiast, I passionately delved into
+            mastering the intricacies of web development. I immersed myself in
+            learning various technologies, wielding a spectrum of programming
+            languages and frameworks, with a particular focus on JavaScript.
+          </p>
+          <p className='my-2'>
+            {" "}
+            Eagerly embracing emerging technologies, I keep my creations
+            innovative. I&apos;m continually expanding my horizon, diving into
+            new programming languages and technologies, ensuring my digital
+            creations stay at the cutting edge.
+          </p>
+          <p>
+            This space encapsulates my passion for crafting digital marvels—a
+            fusion of diverse expertise and unwavering enthusiasm for the
+            evolving web. Together, let's explore the boundless possibilities
+            that the digital realm offers. Thank you for joining me on this
+            journey!
+          </p>
         </motion.p>
       </>
     );
