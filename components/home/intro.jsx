@@ -10,7 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Linkedin from "@/public/linkedin.svg";
 import Github from "@/public/github.svg";
-import avatar from "@/public/avatar.png";
+import avatar from "@/public/avatar.webp";
 import { fira_code } from "../fonts";
 
 export default function Intro() {
